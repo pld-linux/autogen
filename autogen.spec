@@ -5,7 +5,7 @@ Version:	5.7
 Release:	1
 License:	GPL v.2/BSD/LGPL
 Group:		Development
-Source0:	http://heanet.dl.sourceforge.net/autogen/%{name}-%{version}.tar.bz2
+Source0:	http://dl.sourceforge.net/autogen/%{name}-%{version}.tar.bz2
 # Source0-md5:	7a90b2afac2de211f03c374e92dfe9b2
 BuildRequires:	guile-devel
 BuildRequires:	libxml2-devel
