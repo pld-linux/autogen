@@ -7,10 +7,10 @@ License:	GPL v.2/BSD/LGPL
 Group:		Development
 Source0:	http://dl.sourceforge.net/autogen/%{name}-%{version}.tar.bz2
 # Source0-md5:	7a90b2afac2de211f03c374e92dfe9b2
+URL:		http://autogen.sf.net/
 BuildRequires:	guile-devel
 BuildRequires:	libxml2-devel
 BuildRequires:	texinfo
-URL:		http://autogen.sf.net/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -20,7 +20,13 @@ maintenance of programs that contain large amounts of repetitious
 text. This is especially valuable if there are several blocks of such
 text that must be kept synchronized in parallel tables.
 
-#%description -l pl # write me
+%description -l pl
+AutoGen to narzêdzie zaprojektowane do generowania plików programów
+zawieraj±cych powtarzaj±cy siê tekst z ró¿nymi podstawieniami. Celem
+projektu jest uproszczenie zarz±dzania programów zawieraj±cych du¿e
+ilo¶ci powtórzonego tekstu. Jest szczególnie warto¶ciowy je¶li jest
+kilka bloków takiego tekstu, które musz± byæ synchronizowane
+równolegle.
 
 %package devel
 Summary:	Header files for autogen
@@ -82,10 +88,10 @@ rm -rf $RPM_BUILD_ROOT
 
 %files devel
 %defattr(644,root,root,755)
-%{_aclocaldir}/*.m4
-%{_includedir}/autoopts
+%attr(755,root,root) %{_libdir}/lib*.so
 %{_libdir}/lib*.la
-%{_libdir}/lib*.so
+%{_includedir}/autoopts
+%{_aclocaldir}/*.m4
 %{_pkgconfigdir}/*.pc
 
 %files static
