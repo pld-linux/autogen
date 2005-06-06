@@ -9,6 +9,7 @@ Source0:	http://dl.sourceforge.net/autogen/%{name}-%{version}.tar.bz2
 # Source0-md5:	7a90b2afac2de211f03c374e92dfe9b2
 URL:		http://autogen.sf.net/
 BuildRequires:	guile-devel
+BuildRequires:	libltdl-devel
 BuildRequires:	libxml2-devel
 BuildRequires:	texinfo
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
