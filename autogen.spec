@@ -7,7 +7,7 @@ License:	GPL v.2/BSD/LGPL
 Group:		Development
 Source0:	http://dl.sourceforge.net/autogen/%{name}-%{version}.tar.bz2
 # Source0-md5:	c5ecffacafc196220e49aeacfc4bf088
-URL:		http://autogen.sf.net/
+URL:		http://autogen.sourceforge.net/
 BuildRequires:	guile-devel
 BuildRequires:	libltdl-devel
 BuildRequires:	libxml2-devel
