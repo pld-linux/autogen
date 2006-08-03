@@ -1,12 +1,12 @@
 Summary:	Automated program generator
 Summary(pl):	Zautomatyzowany generator programów
 Name:		autogen
-Version:	5.8
+Version:	5.8.4
 Release:	1
 License:	GPL v.2/BSD/LGPL
 Group:		Development
 Source0:	http://dl.sourceforge.net/autogen/%{name}-%{version}.tar.bz2
-# Source0-md5:	94cc4ac62a4799b336e702b02dd3511d
+# Source0-md5:	b65d4b9e3ddbcfd5418b708858c05b66
 URL:		http://autogen.sourceforge.net/
 BuildRequires:	guile-devel
 BuildRequires:	libltdl-devel
