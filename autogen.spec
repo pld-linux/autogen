@@ -2,7 +2,7 @@ Summary:	Automated program generator
 Summary(pl):	Zautomatyzowany generator programów
 Name:		autogen
 Version:	5.8.6
-Release:	1
+Release:	2
 License:	GPL v.2/BSD/LGPL
 Group:		Development
 Source0:	http://dl.sourceforge.net/autogen/%{name}-%{version}.tar.bz2
