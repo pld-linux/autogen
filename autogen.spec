@@ -1,5 +1,5 @@
 Summary:	Automated program generator
-Summary(pl):	Zautomatyzowany generator programów
+Summary(pl.UTF-8):   Zautomatyzowany generator programÃ³w
 Name:		autogen
 Version:	5.8.8
 Release:	1
@@ -21,36 +21,36 @@ maintenance of programs that contain large amounts of repetitious
 text. This is especially valuable if there are several blocks of such
 text that must be kept synchronized in parallel tables.
 
-%description -l pl
-AutoGen to narzêdzie zaprojektowane do generowania plików programów
-zawieraj±cych powtarzaj±cy siê tekst z ró¿nymi podstawieniami. Celem
-projektu jest uproszczenie zarz±dzania programów zawieraj±cych du¿e
-ilo¶ci powtórzonego tekstu. Jest szczególnie warto¶ciowy je¶li jest
-kilka bloków takiego tekstu, które musz± byæ synchronizowane
-równolegle.
+%description -l pl.UTF-8
+AutoGen to narzÄ™dzie zaprojektowane do generowania plikÃ³w programÃ³w
+zawierajÄ…cych powtarzajÄ…cy siÄ™ tekst z rÃ³Å¼nymi podstawieniami. Celem
+projektu jest uproszczenie zarzÄ…dzania programÃ³w zawierajÄ…cych duÅ¼e
+iloÅ›ci powtÃ³rzonego tekstu. Jest szczegÃ³lnie wartoÅ›ciowy jeÅ›li jest
+kilka blokÃ³w takiego tekstu, ktÃ³re muszÄ… byÄ‡ synchronizowane
+rÃ³wnolegle.
 
 %package devel
 Summary:	Header files for autogen
-Summary(pl):	Pliki nag³ówkowe dla autogen
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe dla autogen
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
 %description devel
 Header files for autogen.
 
-%description devel -l pl
-Pliki nag³ówkowe dla autogen.
+%description devel -l pl.UTF-8
+Pliki nagÅ‚Ã³wkowe dla autogen.
 
 %package static
 Summary:	Static autogen library
-Summary(pl):	Statyczna biblioteka autogen
+Summary(pl.UTF-8):   Statyczna biblioteka autogen
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static autogen library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczna biblioteka autogen.
 
 %prep
