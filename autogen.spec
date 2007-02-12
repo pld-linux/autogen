@@ -1,5 +1,5 @@
 Summary:	Automated program generator
-Summary(pl.UTF-8):   Zautomatyzowany generator programów
+Summary(pl.UTF-8):	Zautomatyzowany generator programów
 Name:		autogen
 Version:	5.8.8
 Release:	1
@@ -31,7 +31,7 @@ równolegle.
 
 %package devel
 Summary:	Header files for autogen
-Summary(pl.UTF-8):   Pliki nagłówkowe dla autogen
+Summary(pl.UTF-8):	Pliki nagłówkowe dla autogen
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
@@ -43,7 +43,7 @@ Pliki nagłówkowe dla autogen.
 
 %package static
 Summary:	Static autogen library
-Summary(pl.UTF-8):   Statyczna biblioteka autogen
+Summary(pl.UTF-8):	Statyczna biblioteka autogen
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
