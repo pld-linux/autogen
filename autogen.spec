@@ -1,12 +1,13 @@
+%define	pre	pre4
 Summary:	Automated program generator
 Summary(pl.UTF-8):	Zautomatyzowany generator programów
 Name:		autogen
-Version:	5.9
-Release:	2
+Version:	5.13.0
+Release:	0.%{pre}.1
 License:	GPL v.2/BSD/LGPL
 Group:		Development
-Source0:	http://dl.sourceforge.net/autogen/%{name}-%{version}.tar.bz2
-# Source0-md5:	68c85ad9ba39a210fb9f2b4b456d301d
+Source0:	http://autogen.sourceforge.net/data/%{name}-%{version}%{pre}.tar.xz
+# Source0-md5:	86f80b060d82ab1069043b3478df195f
 URL:		http://autogen.sourceforge.net/
 BuildRequires:	guile-devel
 BuildRequires:	libltdl-devel
@@ -54,7 +55,7 @@ Static autogen library.
 Statyczna biblioteka autogen.
 
 %prep
-%setup -q
+%setup -q -n %{name}-%{version}%{pre}
 
 %build
 %configure
@@ -62,9 +63,12 @@ Statyczna biblioteka autogen.
 
 %install
 rm -rf $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT%{_pkgconfigdir}
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
+
+mv $RPM_BUILD_ROOT%{_datadir}/pkgconfig/autoopts.pc $RPM_BUILD_ROOT%{_pkgconfigdir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
