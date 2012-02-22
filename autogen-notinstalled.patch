@@ -1,0 +1,13 @@
+--- autogen-5.14/doc/auto-opts.tpl.orig	2011-12-21 20:35:06.000000000 +0100
++++ autogen-5.14/doc/auto-opts.tpl	2012-02-21 21:02:00.421301985 +0100
+@@ -112,8 +112,8 @@
+ \=]
+ base=check
+ BASE=`echo $base | tr a-z- A-Z_`
+-cflags="-DTEST_${BASE} `autoopts-config cflags`"
+-ldflags="`autoopts-config ldflags`"
++cflags="-DTEST_${BASE} "
++ldflags="-L${top_builddir}/autoopts/.libs -lopts"
+ autogen ${base}.def
+ cc -o ${base} -g ${cflags} ${base}.c ${ldflags}
+ ./${base} --help

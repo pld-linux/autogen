@@ -1,0 +1,14 @@
+--- autogen-5.14/doc/auto_gen-tpl.in.orig	2012-02-21 21:08:40.174648705 +0100
++++ autogen-5.14/doc/auto_gen-tpl.in	2012-02-22 17:46:17.743801787 +0100
+@@ -75,9 +75,9 @@
+ 
+ @end ignore
+ 
+-@dircategory GNU programming tools
++@dircategory Programming tools:
+ @direntry
+-* AutoGen: (autogen).         [= prog-title =]
++* AutoGen: (autogen).			[= prog-title =]
+ @end direntry
+ 
+ @ifinfo
