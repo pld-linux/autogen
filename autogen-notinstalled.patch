@@ -1,5 +1,5 @@
---- autogen-5.14/doc/auto-opts.tpl.orig	2011-12-21 20:35:06.000000000 +0100
-+++ autogen-5.14/doc/auto-opts.tpl	2012-02-21 21:02:00.421301985 +0100
+--- autogen-5.17.2/doc/auto-opts.tlib.orig	2011-12-21 20:35:06.000000000 +0100
++++ autogen-5.17.2/doc/auto-opts.tlib	2012-02-21 21:02:00.421301985 +0100
 @@ -112,8 +112,8 @@
  \=]
  base=check
