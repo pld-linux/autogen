@@ -1,9 +1,9 @@
---- autogen-5.17.2/doc/auto-opts.tlib.orig	2011-12-21 20:35:06.000000000 +0100
-+++ autogen-5.17.2/doc/auto-opts.tlib	2012-02-21 21:02:00.421301985 +0100
-@@ -112,8 +112,8 @@
+--- autogen-5.18/doc/auto-opts.tlib.orig	2013-07-21 16:30:24.730920497 +0200
++++ autogen-5.18/doc/auto-opts.tlib	2013-07-21 16:37:12.804236705 +0200
+@@ -106,8 +106,8 @@
  \=]
  base=check
- BASE=`echo $base | tr a-z- A-Z_`
+ BASE=`echo $base | tr '[a-z-]' '[A-Z_]'`
 -cflags="-DTEST_${BASE} `autoopts-config cflags`"
 -ldflags="`autoopts-config ldflags`"
 +cflags="-DTEST_${BASE} "
