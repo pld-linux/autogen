@@ -2,7 +2,7 @@ Summary:	Automated program generator
 Summary(pl.UTF-8):	Zautomatyzowany generator programów
 Name:		autogen
 Version:	5.18.4
-Release:	1
+Release:	2
 License:	GPL v3+ (AutoGen), LGPL v2+ (genshell), LGPL v3+ or Modified BSD (AutoOpts library)
 Group:		Development/Tools
 Source0:	http://ftp.gnu.org/gnu/autogen/rel%{version}/%{name}-%{version}.tar.xz
@@ -112,7 +112,22 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/columns
 %attr(755,root,root) %{_bindir}/getdefs
 %attr(755,root,root) %{_bindir}/xml2ag
-%{_datadir}/%{name}
+%dir %{_datadir}/%{name}
+%{_datadir}/%{name}/*.def
+%{_datadir}/%{name}/*.lic
+%{_datadir}/%{name}/*.m4
+%{_datadir}/%{name}/*.pm
+%{_datadir}/%{name}/*.tlib
+%{_datadir}/%{name}/*.tpl
+%attr(755,root,root) %{_datadir}/%{name}/man2man
+%attr(755,root,root) %{_datadir}/%{name}/man2mdoc
+%attr(755,root,root) %{_datadir}/%{name}/man2texi
+%attr(755,root,root) %{_datadir}/%{name}/mdoc2man
+%attr(755,root,root) %{_datadir}/%{name}/mdoc2mdoc
+%attr(755,root,root) %{_datadir}/%{name}/mdoc2texi
+%attr(755,root,root) %{_datadir}/%{name}/texi2man
+%attr(755,root,root) %{_datadir}/%{name}/texi2mdoc
+%attr(755,root,root) %{_datadir}/%{name}/texi2texi
 %{_infodir}/autogen.info*
 %{_mandir}/man1/autogen.1*
 %{_mandir}/man1/columns.1*
