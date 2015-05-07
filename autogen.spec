@@ -1,16 +1,16 @@
 Summary:	Automated program generator
 Summary(pl.UTF-8):	Zautomatyzowany generator programów
 Name:		autogen
-Version:	5.18.4
-Release:	3
+Version:	5.18.5
+Release:	1
 License:	GPL v3+ (AutoGen), LGPL v2+ (genshell), LGPL v3+ or Modified BSD (AutoOpts library)
 Group:		Development/Tools
 Source0:	http://ftp.gnu.org/gnu/autogen/rel%{version}/%{name}-%{version}.tar.xz
-# Source0-md5:	5171f4a7414adb85b7b25e8438791758
+# Source0-md5:	25799e0add1d6314cf868b3b5fef69b8
 Patch0:		%{name}-notinstalled.patch
 Patch1:		%{name}-info.patch
 URL:		http://autogen.sourceforge.net/
-BuildRequires:	guile-devel
+BuildRequires:	guile-devel >= 1.8
 BuildRequires:	libltdl-devel
 BuildRequires:	libxml2-devel
 BuildRequires:	tar >= 1:1.22
@@ -90,9 +90,6 @@ install -d $RPM_BUILD_ROOT%{_pkgconfigdir}
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-# .pc file is arch-dependent, so use arch-dependent pkgconfigdir
-mv $RPM_BUILD_ROOT%{_datadir}/pkgconfig/autoopts.pc $RPM_BUILD_ROOT%{_pkgconfigdir}
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -112,6 +109,8 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/columns
 %attr(755,root,root) %{_bindir}/getdefs
 %attr(755,root,root) %{_bindir}/xml2ag
+%dir %{_libdir}/%{name}
+%{_libdir}/%{name}/tpl-config.tlib
 %dir %{_datadir}/%{name}
 %{_datadir}/%{name}/*.def
 %{_datadir}/%{name}/*.lic
@@ -119,15 +118,13 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/%{name}/*.pm
 %{_datadir}/%{name}/*.tlib
 %{_datadir}/%{name}/*.tpl
-%attr(755,root,root) %{_datadir}/%{name}/man2man
+%{_datadir}/%{name}/libopts-*.tar.gz
 %attr(755,root,root) %{_datadir}/%{name}/man2mdoc
 %attr(755,root,root) %{_datadir}/%{name}/man2texi
 %attr(755,root,root) %{_datadir}/%{name}/mdoc2man
-%attr(755,root,root) %{_datadir}/%{name}/mdoc2mdoc
 %attr(755,root,root) %{_datadir}/%{name}/mdoc2texi
 %attr(755,root,root) %{_datadir}/%{name}/texi2man
 %attr(755,root,root) %{_datadir}/%{name}/texi2mdoc
-%attr(755,root,root) %{_datadir}/%{name}/texi2texi
 %{_infodir}/autogen.info*
 %{_mandir}/man1/autogen.1*
 %{_mandir}/man1/columns.1*
