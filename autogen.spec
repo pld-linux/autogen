@@ -10,12 +10,13 @@ Source0:	http://ftp.gnu.org/gnu/autogen/%{name}-%{version}.tar.xz
 Patch0:		%{name}-notinstalled.patch
 Patch1:		%{name}-info.patch
 URL:		http://autogen.sourceforge.net/
-BuildRequires:	guile-devel >= 1.8
+BuildRequires:	guile-devel >= 5:2.0
 BuildRequires:	libltdl-devel
 BuildRequires:	libxml2-devel
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	texinfo
 BuildRequires:	xz
+BuildConflicts:	guile1-devel
 Requires:	%{name}-libs = %{version}-%{release}
 Suggests:	%{name}-devel = %{version}-%{release}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
