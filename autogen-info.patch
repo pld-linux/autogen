@@ -12,3 +12,17 @@
  @end direntry
  
  @ifinfo
+--- autogen-5.18.12/doc/agdoc.texi.orig	2016-08-29 23:36:40.000000000 +0200
++++ autogen-5.18.12/doc/agdoc.texi	2018-04-11 20:46:44.126560830 +0200
+@@ -58,9 +58,9 @@
+ 
+ @end ignore
+ 
+-@dircategory GNU programming tools
++@dircategory Programming tools:
+ @direntry
+-* AutoGen: (autogen).         The Automated Program Generator
++* AutoGen: (autogen).			The Automated Program Generator
+ @end direntry
+ 
+ @ifinfo
