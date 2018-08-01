@@ -1,12 +1,12 @@
 Summary:	Automated program generator
 Summary(pl.UTF-8):	Zautomatyzowany generator programów
 Name:		autogen
-Version:	5.18.12
-Release:	2
+Version:	5.18.14
+Release:	1
 License:	GPL v3+ (AutoGen), LGPL v2+ (genshell), LGPL v3+ or Modified BSD (AutoOpts library)
 Group:		Development/Tools
 Source0:	http://ftp.gnu.org/gnu/autogen/rel%{version}/%{name}-%{version}.tar.xz
-# Source0-md5:	62e8d5fcc6dde13631bd54fbd2dde07a
+# Source0-md5:	c4d9a1641cb1bad4a3cc4108de6d867a
 Patch0:		%{name}-notinstalled.patch
 Patch1:		%{name}-info.patch
 URL:		http://autogen.sourceforge.net/
