@@ -11,3 +11,16 @@
          pzOut = assignIndex(pzOut, def_bf);
      }
  
+--- autogen-5.18.14/autoopts/usage.c.orig	2017-09-11 06:52:36.000000000 +0200
++++ autogen-5.18.14/autoopts/usage.c	2018-08-02 21:31:30.802129316 +0200
+@@ -787,7 +787,10 @@
+             if (l > nmlen)  nmlen = l;
+         } while (od++, (--ct > 0));
+ 
++#pragma GCC diagnostic push
++#pragma GCC diagnostic ignored "-Wformat-truncation"
+         snprintf(vfmt, sizeof(vfmt), vfmtfmt, (unsigned int)nmlen + 4);
++#pragma GCC diagnostic pop
+     }
+ 
+     if (tab_skip_ct > 0)
