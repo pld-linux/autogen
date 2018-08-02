@@ -1,0 +1,13 @@
+--- autogen-5.18.14/getdefs/getdefs.c.orig	2017-09-11 06:52:36.000000000 +0200
++++ autogen-5.18.14/getdefs/getdefs.c	2018-08-02 18:46:43.118172227 +0200
+@@ -495,7 +495,10 @@
+      *       and insert the index into the output.
+      */
+     if (pzIndexText != NULL) {
++#pragma GCC diagnostic push
++#pragma GCC diagnostic ignored "-Wformat-overflow"
+         sprintf(def_str, "  %s'", name_bf);
++#pragma GCC diagnostic pop
+         pzOut = assignIndex(pzOut, def_bf);
+     }
+ 
