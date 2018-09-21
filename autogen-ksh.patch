@@ -1,0 +1,12 @@
+ksh supports local
+--- ./config/bootstrap.shlib.orig	2018-08-08 23:03:05.000000000 +0200
++++ ./config/bootstrap.shlib	2018-09-21 17:49:28.233607677 +0200
+@@ -79,7 +79,7 @@
+ else setx=:       dashx=   ; set +x
+ fi
+ 
+-test -z "${BASH_VERSION}" && \
++test -z "${BASH_VERSION}" -a -z "${KSH_VERSION}" && \
+     local() { "$@" ; }
+ 
+ # Setup run_ag
