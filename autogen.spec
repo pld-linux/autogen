@@ -2,7 +2,7 @@ Summary:	Automated program generator
 Summary(pl.UTF-8):	Zautomatyzowany generator programów
 Name:		autogen
 Version:	5.18.16
-Release:	1
+Release:	2
 License:	GPL v3+ (AutoGen), LGPL v2+ (genshell), LGPL v3+ or Modified BSD (AutoOpts library)
 Group:		Development/Tools
 Source0:	http://ftp.gnu.org/gnu/autogen/rel%{version}/%{name}-%{version}.tar.xz
@@ -90,7 +90,8 @@ Statyczna biblioteka AutoOpts.
 %build
 # don't require recent gcc just because of 'pragma GCC diagnostic ignored "-Wformat-truncation"'
 CFLAGS="%{rpmcflags} -Wno-error=pragmas"
-%configure
+%configure \
+	--disable-dependency-tracking
 %{__make}
 
 %install
