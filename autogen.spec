@@ -2,7 +2,7 @@ Summary:	Automated program generator
 Summary(pl.UTF-8):	Zautomatyzowany generator programów
 Name:		autogen
 Version:	5.18.16
-Release:	2
+Release:	3
 License:	GPL v3+ (AutoGen), LGPL v2+ (genshell), LGPL v3+ or Modified BSD (AutoOpts library)
 Group:		Development/Tools
 Source0:	http://ftp.gnu.org/gnu/autogen/rel%{version}/%{name}-%{version}.tar.xz
@@ -11,6 +11,7 @@ Patch0:		%{name}-notinstalled.patch
 Patch1:		%{name}-info.patch
 Patch2:		%{name}-ksh.patch
 Patch3:		%{name}-format-truncate.patch
+Patch4:		guile3.0.patch
 URL:		http://autogen.sourceforge.net/
 BuildRequires:	guile-devel >= 5:2.0
 BuildRequires:	libltdl-devel
@@ -83,11 +84,17 @@ Statyczna biblioteka AutoOpts.
 %patch1 -p1
 %patch2 -p1
 %patch3 -p1
+%patch4 -p1
 
 # force regeneration
 %{__rm} doc/autogen.info*
 
 %build
+%{__libtoolize}
+%{__aclocal}
+%{__autoconf}
+%{__autoheader}
+%{__automake}
 # don't require recent gcc just because of 'pragma GCC diagnostic ignored "-Wformat-truncation"'
 CFLAGS="%{rpmcflags} -Wno-error=pragmas"
 %configure \
